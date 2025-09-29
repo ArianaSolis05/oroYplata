@@ -1,0 +1,165 @@
+:root{
+  --gold-1: #d4af37;  
+  --gold-2: #f9e7b3;   
+  --bg: #0b0b0b;       
+  --card-bg: #141414;  
+  --muted: #b5b5b5;
+  --glass: rgba(20,20,20,0.6);
+  --radius: 20px;
+  --shadow: 0 14px 50px rgba(0,0,0,0.6);
+  --accent: linear-gradient(135deg,var(--gold-1),var(--gold-2));
+  font-family: 'Cormorant Garamond', serif;
+}
+
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(212,175,55,0.08), transparent 25%),
+    radial-gradient(circle at 80% 80%, rgba(249,231,179,0.1), transparent 25%),
+    var(--bg);
+  padding:32px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+}
+
+.cuadro{
+  width:100%;
+  max-width:600px; 
+  background: linear-gradient(180deg, rgba(30,30,30,0.98), rgba(20,20,20,0.95));
+  border-radius:var(--radius);
+  padding:48px; 
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(212,175,55,0.25);
+  backdrop-filter: blur(12px);
+  position:relative;
+}
+
+.titulo-crear-cuenta{
+  margin:0 0 12px 0;
+  font-size:34px;
+  font-weight:700;
+  color: var(--gold-1);
+  text-align:center;
+  letter-spacing: 1.2px;
+}
+
+.regístrarse{
+  margin:0 0 28px 0;
+  color:var(--muted);
+  font-size:16px;
+  text-align:center;
+}
+
+.input{
+  margin-bottom:20px;
+  position:relative;
+}
+
+.input input{
+  width:100%;
+  padding:20px 16px 14px 16px;
+  border-radius:14px;
+  border:1px solid rgba(255,215,0,0.2);
+  background: #1b1b1b;
+  font-size:16px;
+  color:#fff;
+  outline:none;
+  transition: box-shadow .2s ease, border-color .2s ease, transform .15s ease;
+  box-sizing:border-box;
+}
+
+.label{
+  position:absolute;
+  left:16px;
+  top:50%;
+  transform:translateY(-50%);
+  pointer-events:none;
+  transition: all .2s ease;
+  color:rgba(220,220,220,0.6);
+  font-size:15px;
+  background:transparent;
+  padding:0 6px;
+}
+
+.input input:focus + .label,
+.input input:not(:placeholder-shown) + .label,
+.input input:valid + .label {
+  top: -11px;
+  font-size:13px;
+  color: var(--gold-2);
+  background: var(--card-bg);
+  padding: 0 5px;
+  border-radius: 4px;
+}
+
+.input input:focus{
+  box-shadow: 0 8px 28px rgba(212,175,55,0.35);
+  border-color: var(--gold-1);
+  transform: translateY(-2px);
+}
+
+.btn{
+  margin-top:16px;
+  width:100%;
+  padding:18px 20px;
+  border-radius:14px;
+  border:none;
+  cursor:pointer;
+  font-weight:700;
+  font-size:18px;
+  background: var(--accent);
+  color:#111;
+  box-shadow: 0 12px 32px rgba(212,175,55,0.4);
+  transition: transform .15s ease, box-shadow .15s ease, opacity .15s ease;
+}
+
+.btn:hover{ 
+  transform: translateY(-3px); 
+  box-shadow: 0 14px 36px rgba(212,175,55,0.55);
+}
+.btn:active{ 
+  transform: translateY(0); 
+  opacity:0.9; 
+}
+
+.tienes-cuenta{
+  margin-top:20px;
+  text-align:center;
+  color:var(--muted);
+  font-size:15px;
+}
+.tienes-cuenta a{
+  color: var(--gold-1);
+  text-decoration:none;
+  font-weight:600;
+  transition: color .2s ease;
+}
+.tienes-cuenta a:hover{
+  color: var(--gold-2);
+}
+
+@media (max-width:800px){
+  .cuadro{ padding:30px; border-radius:16px; }
+  .titulo-crear-cuenta{ font-size:26px; }
+}
+
+.cuadro::after{
+  content:"";
+  position:absolute;
+  width:120px;
+  height:120px;
+  right:-35px;
+  top:-35px;
+  background: radial-gradient(circle at 30% 30%, rgba(212,175,55,0.25), transparent 35%),
+  radial-gradient(circle at 70% 70%, rgba(249,231,179,0.2), transparent 35%);
+  border-radius:50%;
+  pointer-events:none;
+  transform: rotate(18deg);
+  filter: blur(10px);
+}

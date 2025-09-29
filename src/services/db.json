@@ -1,0 +1,120 @@
+{
+  "usuarios": [
+    {
+      "id": "66cb",
+      "nombre": "Ari",
+      "correo": "ari@ari.com",
+      "clave": "123",
+      "tipoUsuario": "admin"
+    },
+    {
+      "id": "08e1",
+      "nombre": "Luis",
+      "correo": "lucho@lucho.com",
+      "clave": "123",
+      "tipoUsuario": "usuario"
+    },
+    {
+      "id": "7fcb",
+      "nombre": "Guido",
+      "correo": "guido@guido.com",
+      "clave": "123",
+      "tipoUsuario": "usuario"
+    },
+    {
+      "id": "a28a",
+      "nombre": "Taylor",
+      "correo": "tay@tay.com",
+      "clave": "123",
+      "tipoUsuario": "usuario"
+    },
+    {
+      "id": "700a",
+      "nombre": "Pepe Viyuela",
+      "correo": "pepe@pepe.com",
+      "clave": "pepe",
+      "tipoUsuario": "usuario"
+    },
+    {
+      "id": "bdd6",
+      "nombre": "Mari",
+      "correo": "mari@mari.com",
+      "clave": "123",
+      "tipoUsuario": "usuario"
+    },
+    {
+      "id": "f34f",
+      "nombre": "Mariana",
+      "correo": "mari@mari.com",
+      "clave": "123",
+      "tipoUsuario": "usuario"
+    }
+  ],
+  "joyeria": [
+    {
+      "id": "df1d",
+      "nombreProducto": "Anillo",
+      "precioProducto": "3000",
+      "categoriaProducto": "anillos",
+      "descripcionProducto": "Anillo Plateado",
+      "imgProducto": "https://www.joyeriasanchez.com/174908-large_default/anillo-perugia-oro-blanco-18k-y-diamantes-040-cts.jpg"
+    },
+    {
+      "id": "4291",
+      "nombreProducto": "collar",
+      "precioProducto": "20000",
+      "categoriaProducto": "collares",
+      "descripcionProducto": "collar",
+      "imgProducto": "https://tse3.mm.bing.net/th/id/OIP.uMxHegZMUnBiAI7ADHI9tAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+    },
+    {
+      "id": "2dd0",
+      "nombreProducto": "prueba",
+      "precioProducto": "prueba",
+      "categoriaProducto": "anillos",
+      "descripcionProducto": "prueba",
+      "imgProducto": "prueba"
+    },
+    {
+      "id": "1895",
+      "nombreProducto": "lllllll",
+      "precioProducto": "lll",
+      "categoriaProducto": "pulsera",
+      "descripcionProducto": "llll",
+      "imgProducto": "llll"
+    },
+    {
+      "id": "961b",
+      "nombreProducto": "Arete",
+      "precioProducto": "3500",
+      "categoriaProducto": "aretes",
+      "descripcionProducto": "arete dorado",
+      "imgProducto": "https://tse1.mm.bing.net/th/id/OIP.L_IPpcEfist2zkP2l35DnAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+    },
+    {
+      "id": "5f42",
+      "nombreProducto": "Pulsera Plateada",
+      "precioProducto": "2000",
+      "categoriaProducto": "pulsera",
+      "descripcionProducto": "Pulsera ",
+      "imgProducto": "https://tse4.mm.bing.net/th/id/OIP.NmY0dj4pqZBBGoekiumgUwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+    },
+    {
+      "id": "6cc9",
+      "nombreProducto": "Pulsera",
+      "precioProducto": "2000",
+      "categoriaProducto": "pulseras",
+      "descripcionProducto": "pulsera plateada",
+      "imgProducto": "https://tse4.mm.bing.net/th/id/OIP.NmY0dj4pqZBBGoekiumgUwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+    },
+    {
+      "id": "7c0d",
+      "nombreProducto": "",
+      "precioProducto": "",
+      "categoriaProducto": "",
+      "descripcionProducto": "",
+      "imgProducto": ""
+    }
+  ],
+  "carrito": []
+}
