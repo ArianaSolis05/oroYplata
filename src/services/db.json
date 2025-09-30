@@ -68,22 +68,6 @@
       "imgProducto": "https://tse3.mm.bing.net/th/id/OIP.uMxHegZMUnBiAI7ADHI9tAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
     },
     {
-      "id": "2dd0",
-      "nombreProducto": "prueba",
-      "precioProducto": "prueba",
-      "categoriaProducto": "anillos",
-      "descripcionProducto": "prueba",
-      "imgProducto": "prueba"
-    },
-    {
-      "id": "1895",
-      "nombreProducto": "lllllll",
-      "precioProducto": "lll",
-      "categoriaProducto": "pulsera",
-      "descripcionProducto": "llll",
-      "imgProducto": "llll"
-    },
-    {
       "id": "961b",
       "nombreProducto": "Arete",
       "precioProducto": "3500",
@@ -114,6 +98,54 @@
       "categoriaProducto": "",
       "descripcionProducto": "",
       "imgProducto": ""
+    },
+    {
+      "id": "e43c",
+      "nombreProducto": "Collar Plateado",
+      "precioProducto": "20000",
+      "categoriaProducto": "collares",
+      "descripcionProducto": "Collar",
+      "imgProducto": "https://images.asos-media.com/products/collares-plateados-en-varias-hileras-con-disenos-delicados-de-acero-inoxidable-allegra-de-petit-moments/205695742-1-silver?$n_640w$&wid=513&fit=constrain"
+    },
+    {
+      "id": "efc8",
+      "nombreProducto": "Pulsera plateada",
+      "precioProducto": "5000",
+      "categoriaProducto": "Pulseras",
+      "descripcionProducto": "Pulsera",
+      "imgProducto": "https://i.pinimg.com/736x/8b/10/3a/8b103a735a5ec493711dc48948d9d410.jpg"
+    },
+    {
+      "id": "fc75",
+      "nombreProducto": "collar",
+      "precioProducto": "15000",
+      "categoriaProducto": "Collares",
+      "descripcionProducto": "collar",
+      "imgProducto": "https://tse1.mm.bing.net/th/id/OIP.LHzsEDS0XedXpIyKyV8oxQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+    },
+    {
+      "id": "e5db",
+      "nombreProducto": "aaaaa",
+      "precioProducto": "bbbbb",
+      "categoriaProducto": "ccccc",
+      "descripcionProducto": "ddddd",
+      "imgProducto": "eeeee"
+    },
+    {
+      "id": "41d9",
+      "nombreProducto": "aaa",
+      "precioProducto": "aa",
+      "categoriaProducto": "Collares",
+      "descripcionProducto": "dsad",
+      "imgProducto": "dasdas"
+    },
+    {
+      "id": "059d",
+      "nombreProducto": "Collar blanco",
+      "precioProducto": "40000",
+      "categoriaProducto": "Collares",
+      "descripcionProducto": "Collar elegante",
+      "imgProducto": "https://acdn.mitiendanube.com/stores/357/850/products/10a1-a6095b9e9df20f0fd716079954098343-640-0.jpg"
     }
   ],
   "carrito": []

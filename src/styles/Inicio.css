@@ -9,6 +9,7 @@
   --shadow: 0 12px 30px rgba(0,0,0,0.65);
   --accent-gradient: linear-gradient(135deg, #d4af37, #f5deb3);
   --font-main: 'Playfair Display', serif;
+  overflow-x: hidden;
 }
 
 body {
@@ -18,6 +19,7 @@ body {
   color: var(--text-color);
 }
 
+/* Header */
 .home-header {
   background-color: rgba(28, 28, 28, 0.9);
   padding: 20px 50px;
@@ -57,6 +59,7 @@ body {
   color: var(--lila-1);
 }
 
+/* Hero */
 .hero-section {
   display: flex;
   flex-direction: column;
@@ -94,6 +97,7 @@ body {
   color: var(--lila-2);
 }
 
+/* Products */
 .products-section {
   padding: 70px 20px;
   text-align: center;
@@ -149,16 +153,6 @@ body {
   line-height: 1.5;
 }
 
-.home-footer {
-  text-align: center;
-  padding: 30px 20px;
-  background: #0a0a0a;
-  margin-top: 60px;
-  font-size: 14px;
-  color: var(--muted);
-  border-top: 1px solid rgba(212,175,55,0.2);
-}
-
 .btn-comprar {
   background: var(--accent-gradient);
   color: var(--bg);
@@ -176,4 +170,178 @@ body {
   background: linear-gradient(135deg, #f5deb3, #d4af37);
   transform: scale(1.05);
   color: var(--bg);
+}
+
+/* Contact Info */
+.contact-info {
+  background-color: #141313; 
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+  max-width: 500px;
+  margin: 40px auto;
+  text-align: center;
+  color: #d4af37; 
+  font-family: 'Arial', sans-serif;
+  border: 2px solid #d4af37; 
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-info:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9);
+}
+
+.contact-info p {
+  font-size: 18px;
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.contact-info a {
+  color: #f5deb3; 
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.contact-info a:hover {
+  color: #d4af37;
+  text-decoration: underline;
+}
+
+/* Carrito expansible con imagen */
+.cart-panel {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  width: 60px;              
+  height: 60px;
+  background-color: var(--card-bg);
+  background-image: url("../imagenes/depositphotos_232844718-stock-illustration-shopping-cart-icon-simple-linear.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: var(--text-color);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  border-radius: var(--radius);
+  padding: 5px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-panel::before {
+  content: "🛒";
+  font-size: 1.5rem;
+  display: block;
+  z-index: 1;
+}
+
+/* Al pasar el mouse, el carrito se expande */
+.cart-panel:hover {
+  width: 300px;             
+  height: 80vh;
+  padding: 20px;
+  overflow-y: auto;
+  cursor: default;
+  background-image: none;
+  background-color: var(--card-bg);
+}
+
+/* Título del carrito */
+.cart-panel h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Mostrar título al expandir */
+.cart-panel:hover h3 {
+  opacity: 1;
+}
+
+/* Items dentro del carrito */
+.cart-items {
+  display: none;            
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Mostrar items al expandir */
+.cart-panel:hover .cart-items {
+  display: flex;            
+}
+
+/* Items individuales */
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: rgba(255,255,255,0.05);
+  border-radius: var(--radius);
+}
+
+.cart-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--muted);
+}
+
+/* Botones dentro del carrito */
+.cart-item button {
+  margin-left: auto;
+  background-color: var(--lila-1);
+  color: var(--text-color);
+  border: none;
+  padding: 5px 10px;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.cart-item button:hover {
+  background-color: var(--lila-2);
+  color: var(--bg);
+}
+
+/* Botón comprar todo */
+.btn-comprar-todo {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--lila-1);
+  color: var(--text-color);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.btn-comprar-todo:hover {
+  background-color: var(--lila-2);
+  color: var(--bg);
+}
+
+/* Footer */
+.home-footer {
+  text-align: center;
+  padding: 30px 20px;
+  background: #0a0a0a;
+  margin-top: 60px;
+  font-size: 14px;
+  color: var(--muted);
+  border-top: 1px solid rgba(212,175,55,0.2);
 }
