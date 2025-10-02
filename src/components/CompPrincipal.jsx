@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getData } from "../services/fetch";
+import { getData, postData } from "../services/fetch";
 import "../styles/Inicio.css";
 
 function CompPrincipal() {
@@ -16,18 +16,24 @@ function CompPrincipal() {
   useEffect(() => {
     async function cargarProductos() {
       const data = await getData("joyeria");
-      const sinCategoria = data.filter((joya)=>joya.categoriaProducto != "anillos" && joya.categoriaProducto != "collares" && joya.categoriaProducto != "pulseras" && joya.categoriaProducto != "aretes")
+      const sinCategoria = data.filter(
+        (joya) =>
+          joya.categoriaProducto != "Anillos" &&
+          joya.categoriaProducto != "Collares" &&
+          joya.categoriaProducto != "Pulseras" &&
+          joya.categoriaProducto != "Aretes"
+      );
       const filtroAnillos = data.filter(
-        (joya) => joya.categoriaProducto === "anillos"
+        (joya) => joya.categoriaProducto === "Anillos"
       );
       const filtroCollares = data.filter(
-        (joya) => joya.categoriaProducto === "collares"
+        (joya) => joya.categoriaProducto === "Collares"
       );
       const filtroPulseras = data.filter(
-        (joya) => joya.categoriaProducto === "pulseras"
+        (joya) => joya.categoriaProducto === "Pulseras"
       );
       const filtroAretes = data.filter(
-        (joya) => joya.categoriaProducto === "aretes"
+        (joya) => joya.categoriaProducto === "Aretes"
       );
       setAnillos(filtroAnillos);
       setCollares(filtroCollares);
@@ -48,11 +54,21 @@ function CompPrincipal() {
     setCarrito(carrito.filter((item) => item.id !== id));
   };
 
-  const comprarTodo = () => {
+  const comprarTodo = async () => {
     if (carrito.length === 0) {
       alert("El carrito está vacío");
       return;
     }
+    const datosCompra = JSON.parse(localStorage.getItem("carrito"));
+    const datosUsuario = JSON.parse(localStorage.getItem("usuario"));
+    const objCompra = {
+      productos: datosCompra,
+      idUsuario: datosUsuario.id,
+      correoUsuario: datosUsuario.correo,
+    };
+
+    const peticion = await postData(objCompra, "carrito");
+    console.log(peticion);
     alert(
       `Compra realizada: ${carrito.map((p) => p.nombreProducto).join(", ")}`
     );
@@ -74,67 +90,62 @@ function CompPrincipal() {
           </ul>
         </nav>
       </header>
-
       <section className="hero-section">
         <h2>Descubre nuestra colección exclusiva</h2>
       </section>
-
-      <aside className="cart-panel">
-        <h3>Carrito de Compras</h3>
-        <button
-          onClick={()=>setMostrarCarrito(!mostrarCarrito)}
-        >Mostrar Carrito</button>
-        {mostrarCarrito && (
-          <>
-            {carrito.length === 0 ? (
-              <p>El carrito está vacío</p>
-            ) : (
-              <div className="cart-items">
-                {carrito.map((item, index) => (
-                  <div key={index} className="cart-item">
-                    <img
-                      src={item.imgProducto}
-                      alt={item.nombreProducto}
-                      className="cart-img"
-                    />
-                    <span>{item.nombreProducto}</span>
-                    <strong>₡{item.precioProducto}</strong>
-                    <button onClick={() => eliminarDelCarrito(item.id)}>
-                      Eliminar
-                    </button>
-                  </div>
-                ))}
-                <button onClick={comprarTodo} className="btn-comprar-todo">
-                  Comprar Todo
+      <aside className={`cart-panel ${mostrarCarrito ? "expanded" : ""}`}>
+        {" "}
+        {/* --- CARRITO FLOTANTE AÑADIDO --- */}
+        <button onClick={() => setMostrarCarrito(!mostrarCarrito)}>
+          <span className="cart-emoji">🛒</span>
+        </button>
+        <div className="cart-items">
+          {carrito.length === 0 ? (
+            <p>El carrito está vacío</p>
+          ) : (
+            carrito.map((item, index) => (
+              <div key={index} className="cart-item">
+                <img
+                  src={item.imgProducto}
+                  alt={item.nombreProducto}
+                  className="cart-img"
+                />
+                <span>{item.nombreProducto}</span>
+                <strong>₡{item.precioProducto}</strong>
+                <button onClick={() => eliminarDelCarrito(item.id)}>
+                  Eliminar
                 </button>
               </div>
-            )}
-          </>
-        )}
-      </aside>
-
+            ))
+          )}
+          {carrito.length > 0 && (
+            <button onClick={comprarTodo} className="btn-comprar-todo">
+              Comprar Todo
+            </button>
+          )}
+        </div>
+      </aside>{" "}
       <section className="products-section">
         {categoriaActiva !== "Contacto" && <h3>Productos</h3>}
-        
-        <h3>Sin categoría</h3>
+
         <div className="product-grid">
           {productos.map((p) => (
-                <div key={p.id} className="product-card">
-                  <img src={p.imgProducto} alt={p.nombreProducto} />
-                  <h4>{p.nombreProducto}</h4>
-                  <p>{p.descripcionProducto}</p>
-                  <strong>₡{p.precioProducto}</strong>
-                  <p>
-                    <em>{p.categoriaProducto}</em>
-                  </p>
-                  <button
-                    className="btn-comprar"
-                    onClick={() => agregarAlCarrito(p)}
-                  >
-                    Comprar
-                  </button>
-                </div>
-              ))}
+            <div key={p.id} className="product-card">
+              <img src={p.imgProducto} alt={p.nombreProducto} />
+              <h4>{p.nombreProducto}</h4>
+              <p>{p.descripcionProducto}</p>
+              <strong>₡{p.precioProducto}</strong>
+              <p>
+                <em>{p.categoriaProducto}</em>
+              </p>
+              <button
+                className="btn-comprar"
+                onClick={() => agregarAlCarrito(p)}
+              >
+                Comprar
+              </button>
+            </div>
+          ))}
         </div>
         {(categoriaActiva === "Inicio" || categoriaActiva === "Anillos") && (
           <>
@@ -264,7 +275,6 @@ function CompPrincipal() {
           </>
         )}
       </section>
-
       <footer className="home-footer">
         <p>© 2025 Joyería Elegancia. Todos los derechos reservados.</p>
       </footer>

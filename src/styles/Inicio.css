@@ -212,109 +212,111 @@ body {
   color: #d4af37;
   text-decoration: underline;
 }
+/* --- CARRITO FLOTANTE PEQUEÑO Y DESPLEGABLE --- */
 
-/* Carrito expansible con imagen */
+/* Carrito flotante pequeño por defecto */
 .cart-panel {
   position: fixed;
-  top: 100px;
+  top: 114px;
   right: 20px;
-  width: 60px;              
-  height: 60px;
-  background-color: var(--card-bg);
-  background-image: url("../imagenes/depositphotos_232844718-stock-illustration-shopping-cart-icon-simple-linear.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  width: 80px;          /* más grande que antes */
+  height: 80px;  
+  right: 19px;
+         /* más grande que antes */
+  background-color: #000; /* fondo negro */
   color: var(--text-color);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   border-radius: var(--radius);
-  padding: 5px;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  z-index: 1000;
-  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  padding: 0;           
+  z-index: 100;
+  transition: all 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
 }
-
-.cart-panel::before {
-  content: "🛒";
-  font-size: 1.5rem;
+.cart-emoji {
+  font-size: 30px; /* solo aumenta el emoji */
   display: block;
-  z-index: 1;
 }
 
-/* Al pasar el mouse, el carrito se expande */
-.cart-panel:hover {
-  width: 300px;             
-  height: 80vh;
-  padding: 20px;
-  overflow-y: auto;
-  cursor: default;
-  background-image: none;
-  background-color: var(--card-bg);
-}
 
-/* Título del carrito */
-.cart-panel h3 {
-  margin: 0 0 10px 0;
-  font-size: 1.2rem;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
 
-/* Mostrar título al expandir */
-.cart-panel:hover h3 {
-  opacity: 1;
-}
-
-/* Items dentro del carrito */
+/* Contenedor de items siempre presente pero oculto */
 .cart-items {
-  display: none;            
-  flex-direction: column;
-  gap: 12px;
+  opacity: 0;
+  max-height: 0;
+  overflow-y: hidden;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  padding: 0 10px;
 }
 
-/* Mostrar items al expandir */
-.cart-panel:hover .cart-items {
-  display: flex;            
+/* Estado expandido al presionar */
+.cart-panel.expanded {
+  width: 300px;        
+  height: auto;
+  padding: 15px;
+  background-color: #000; /* fondo negro al expandirse */
 }
 
-/* Items individuales */
+/* Mostrar items al expandirse */
+.cart-panel.expanded .cart-items {
+  opacity: 1;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/* Botón para mostrar/ocultar */
+.cart-panel button {
+  background-color: #000;
+  color: var(--text-color);
+  border: none;
+  border-radius: var(--radius);
+  padding: 8px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.3s;
+}
+
+
+
+/* Item individual */
 .cart-item {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 10px;
-  padding: 10px;
-  background-color: rgba(255,255,255,0.05);
+  margin-bottom: 10px;
+  background-color: var(--card-bg-light);
+  padding: 8px;
   border-radius: var(--radius);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Imagen del producto */
 .cart-img {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   object-fit: cover;
-  border-radius: var(--radius);
-  border: 1px solid var(--muted);
+  border-radius: 5px;
 }
 
-/* Botones dentro del carrito */
+/* Botón eliminar */
 .cart-item button {
-  margin-left: auto;
   background-color: var(--lila-1);
   color: var(--text-color);
   border: none;
-  padding: 5px 10px;
   border-radius: var(--radius);
+  padding: 4px 8px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .cart-item button:hover {
   background-color: var(--lila-2);
-  color: var(--bg);
 }
 
 /* Botón comprar todo */
@@ -326,22 +328,12 @@ body {
   border: none;
   border-radius: var(--radius);
   cursor: pointer;
-  margin-top: 15px;
-  font-weight: bold;
+  margin-top: 10px;
+  transition: background-color 0.3s;
 }
 
 .btn-comprar-todo:hover {
   background-color: var(--lila-2);
-  color: var(--bg);
 }
 
-/* Footer */
-.home-footer {
-  text-align: center;
-  padding: 30px 20px;
-  background: #0a0a0a;
-  margin-top: 60px;
-  font-size: 14px;
-  color: var(--muted);
-  border-top: 1px solid rgba(212,175,55,0.2);
-}
+/* --- FIN CARRITO FLOTANTE --- */

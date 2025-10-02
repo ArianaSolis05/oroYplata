@@ -1,12 +1,28 @@
 import React from "react";
 import "../styles/carrito.css";
+import { postData } from "../services/fetch";
 
-const Carrito = ({ carrito, setCarrito, comprarTodo }) => {
+const Carrito = ({ carrito, setCarrito }) => {
 
   const eliminarDelCarrito = (id) => {
     setCarrito(carrito.filter((item) => item.id !== id));
   }
+  async function comprar() {
+    console.log("acaaa");
+    
+    const datosCompra = JSON.parse(localStorage.getItem("carrito"))
+    const datosUsuario = JSON.parse(localStorage.getItem("usuario"))
+    const objCompra = {
+        productos: datosCompra,
+        idUsuario: datosUsuario.id,
+        correoUsuario: datosUsuario.correo
+    }
 
+    const peticion = await postData(objCompra,"carrito")
+    console.log(peticion);
+    
+  }
+    
   return (
     <aside className="cart-panel">
       <h3>Carrito de Compras</h3>
@@ -22,7 +38,7 @@ const Carrito = ({ carrito, setCarrito, comprarTodo }) => {
               <button onClick={() => eliminarDelCarrito(item.id)}>Eliminar</button>
             </div>
           ))}
-          <button onClick={comprarTodo} className="btn-comprar-todo">Comprar Todo</button>
+          <button onClick={comprar} className="btn-comprar-todo">Comprar Todo</button>
         </div>
       )}
     </aside>

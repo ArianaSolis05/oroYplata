@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { deleteData, getData, postData } from "../services/fetch";
+import { deleteData, getData, postData, patchData } from "../services/fetch"; 
 import "../styles/Admin.css";
 import ProductCard from "./ProductCard";
 import { useNavigate } from "react-router-dom";
@@ -18,15 +18,19 @@ const Admin = () => {
   const [cantTotalUsuarios, setCantTotalUsuarios] = useState(0);
   const [listaProductos, setListaProductos] = useState([]);
   const [mostrar, setMostrar] = useState(false);
+  const [mostrarUsuarios, setMostrarUsuarios] = useState(false);
   const [recarga, setRecarga] = useState(false);
+  const [usuarios, setUsuarios] = useState([]);
+  const [editarProductoId, setEditarProductoId] = useState(null);
 
   useEffect(() => {
     async function traerInfo() {
       const datosProductos = await getData("joyeria");
       setCantTotalProductos(datosProductos.length);
+      setListaProductos(datosProductos); 
       const datosUsuario = await getData("usuarios");
       setCantTotalUsuarios(datosUsuario.length);
-      setListaProductos(datosProductos);
+      setUsuarios(datosUsuario);
     }
     traerInfo();
   }, [recarga]);
@@ -38,29 +42,82 @@ const Admin = () => {
         "Content-Type": "application/json",
       },
     });
-    const respuesta = await peticion.json();
-    console.log(respuesta);
+    await peticion.json();
+    setRecarga(!recarga);
+  }
+
+  async function eliminarUsuario(id) {
+    await deleteData("usuarios", id);
+    setRecarga(!recarga);
   }
 
   async function agregarProducto() {
-    const objProducto = {
-      nombreProducto,
-      precioProducto,
-      categoriaProducto, // --- ahora es un solo string ---
-      descripcionProducto,
-      imgProducto,
-    };
-    await postData(objProducto, "joyeria");
+    if (editarProductoId) {
+      const objProducto = {
+        nombreProducto,
+        precioProducto,
+        categoriaProducto,
+        descripcionProducto,
+        imgProducto,
+      };
+      await patchData("joyeria", editarProductoId, objProducto); 
+      alert("Producto editado correctamente");
+      setEditarProductoId(null);
+    } else {
+      const objProducto = {
+        nombreProducto,
+        precioProducto,
+        categoriaProducto,
+        descripcionProducto,
+        imgProducto,
+      };
+      await postData(objProducto, "joyeria");
+      alert("Se agregó el producto");
+    }
     setNombreProducto("");
     setPrecioProducto("");
-    setCategoriaProducto(""); // --- limpia el select ---
+    setCategoriaProducto("");
     setDescripcionProducto("");
     setImgProducto("");
-    alert("Se agregó el producto");
+    setRecarga(!recarga); 
   }
 
+  const editarProducto = async (producto) => {
+    const nombreProducto = prompt("Editar nombre producto", producto.nombreProducto);
+    const precioProducto = prompt("Editar precio producto", producto.precioProducto);
+    const categoriaProducto = prompt("Editar categoria producto", producto.categoriaProducto);
+    const descripcionProducto = prompt("Editar descripcion producto", producto.descripcionProducto);
+    const imgProducto = prompt("Editar img producto", producto.imgProducto);
+
+    const objetoProducto = { 
+      nombreProducto,
+      precioProducto,
+      categoriaProducto,
+      descripcionProducto,
+      imgProducto
+    };
+    await patchData("joyeria", producto.id, objetoProducto);
+    setRecarga(!recarga);
+  };
+
+  const editarUsuario = (usuario) => {
+    const nuevoNombre = prompt("Editar nombre:", usuario.nombre);
+    const nuevoCorreo = prompt("Editar correo:", usuario.correo);
+    const nuevoTipo = prompt("Editar tipo de usuario:", usuario.tipoUsuario);
+    if (nuevoNombre && nuevoCorreo && nuevoTipo) {
+      const objUsuario = {
+        nombre: nuevoNombre,
+        correo: nuevoCorreo,
+        tipoUsuario: nuevoTipo,
+      };
+      patchData("usuarios", usuario.id, objUsuario).then(() =>
+        setRecarga(!recarga)
+      );
+    }
+  };
+
   const toggleSubmenu = (menu) => {
-    setOpenSubmenu(openSubmenu === menu ? "" : menu); // --- NUEVO ---
+    setOpenSubmenu(openSubmenu === menu ? "" : menu);
   };
 
   return (
@@ -77,41 +134,20 @@ const Admin = () => {
             {openSubmenu === "productos" && (
               <ul className="submenu">
                 <li
-                  onClick={() => {
+                  onClick={() =>
                     document
                       .querySelector(".add-product-form")
-                      .scrollIntoView({ behavior: "smooth" });
-                  }}
+                      .scrollIntoView({ behavior: "smooth" })
+                  }
                 >
                   Agregar Producto
                 </li>
-                <li
-                  onClick={() => {
-                    setMostrar(true);
-                  }}
-                >
-                  Ver Productos
-                </li>
+                <li onClick={() => setMostrar(true)}>Ver Productos</li>
               </ul>
             )}
           </li>
-
           <li onClick={() => navigate("/principal")}>Ir a Principal</li>
-
-          <li onClick={() => toggleSubmenu("pedidos")}>
-            Pedidos
-            {openSubmenu === "pedidos" && (
-              <ul className="submenu">
-                <li
-                  onClick={() => {
-                    navigate("/admin/ver-pedidos");
-                  }}
-                >
-                  Ver Pedidos
-                </li>
-              </ul>
-            )}
-          </li>
+          
           <li
             onClick={() => {
               navigate("/");
@@ -133,10 +169,7 @@ const Admin = () => {
             <h3>Total Productos</h3>
             <p>{cantTotalProductos}</p>
           </div>
-          <div className="card">
-            <h3>Pedidos Pendientes</h3>
-            <p>{cantTotalPedidos}</p>
-          </div>
+          
           <div className="card">
             <h3>Usuarios Registrados</h3>
             <p>{cantTotalUsuarios}</p>
@@ -150,31 +183,28 @@ const Admin = () => {
               <tr>
                 <th>Nombre</th>
                 <th>Precio</th>
-                <th>Stock</th>
+                <th>Categoría</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Anillo de Oro</td>
-                <td>$250</td>
-                <td>20</td>
-              </tr>
-              <tr>
-                <td>Collar de Plata</td>
-                <td>$150</td>
-                <td>15</td>
-              </tr>
-              <tr>
-                <td>Pulsera Elegante</td>
-                <td>$100</td>
-                <td>10</td>
-              </tr>
+              {listaProductos
+                .slice(-3)
+                .reverse()
+                .map((producto) => (
+                  <tr key={producto.id}>
+                    <td>{producto.nombreProducto}</td>
+                    <td>₡{producto.precioProducto}</td>
+                    <td>{producto.categoriaProducto}</td>
+                  </tr>
+                ))}
             </tbody>
           </table>
         </section>
 
         <section className="add-product-form">
-          <h2>Agregar Nuevo Producto</h2>
+          <h2>
+            {editarProductoId ? "Editar Producto" : "Agregar Nuevo Producto"}
+          </h2>
           <input
             value={nombreProducto}
             type="text"
@@ -187,7 +217,6 @@ const Admin = () => {
             placeholder="Precio Producto"
             onChange={(e) => setPrecioProducto(e.target.value)}
           />
-
           <select
             className="select-categorias"
             value={categoriaProducto}
@@ -199,7 +228,6 @@ const Admin = () => {
             <option value="Aretes">Aretes</option>
             <option value="Anillos">Anillos</option>
           </select>
-
           <input
             value={descripcionProducto}
             type="text"
@@ -212,19 +240,18 @@ const Admin = () => {
             placeholder="Imagen Producto"
             onChange={(e) => setImgProducto(e.target.value)}
           />
-          <button onClick={agregarProducto}>Agregar Producto</button>
+          <button onClick={agregarProducto}>
+            {editarProductoId ? "Guardar Cambios" : "Agregar Producto"}
+          </button>
         </section>
 
-        <button
-          onClick={() => {
-            setMostrar(!mostrar);
-          }}
-        >
-          Mostrar
+        <button className="product-card" onClick={() => setMostrar(!mostrar)}>
+          Mostrar Productos
         </button>
-        {mostrar &&
-          listaProductos.map((lista) => {
-            return (
+
+        {mostrar && (
+          <div className="productos-container">
+            {listaProductos.map((lista) => (
               <ProductCard
                 key={lista.id}
                 precioProducto={lista.precioProducto}
@@ -232,13 +259,35 @@ const Admin = () => {
                 imgProducto={lista.imgProducto}
                 categoriaProducto={lista.categoriaProducto}
                 nombreProducto={lista.nombreProducto}
-                eliminar={() => {
-                  eliminarJoya(lista.id);
-                  setRecarga(!recarga);
-                }}
+                eliminar={() => eliminarJoya(lista.id)}
+                editar={() => editarProducto(lista)}
               />
-            );
-          })}
+            ))}
+          </div>
+        )}
+
+        <button
+          className="usuario-btn"
+          onClick={() => setMostrarUsuarios(!mostrarUsuarios)}
+        >
+          Mostrar Usuarios
+        </button>
+
+        {mostrarUsuarios && (
+          <>
+            {usuarios.map((usuario) => (
+              <div className="usuario-card" key={usuario.id}>
+                <p>{usuario.nombre}</p>
+                <p>{usuario.correo}</p>
+                <p>{usuario.tipoUsuario}</p>
+                <button onClick={() => eliminarUsuario(usuario.id)}>
+                  Eliminar
+                </button>
+                <button onClick={() => editarUsuario(usuario)}>Editar</button>
+              </div>
+            ))}
+          </>
+        )}
       </main>
     </div>
   );

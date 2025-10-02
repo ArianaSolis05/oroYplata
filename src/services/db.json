@@ -29,22 +29,8 @@
       "tipoUsuario": "usuario"
     },
     {
-      "id": "700a",
-      "nombre": "Pepe Viyuela",
-      "correo": "pepe@pepe.com",
-      "clave": "pepe",
-      "tipoUsuario": "usuario"
-    },
-    {
       "id": "bdd6",
       "nombre": "Mari",
-      "correo": "mari@mari.com",
-      "clave": "123",
-      "tipoUsuario": "usuario"
-    },
-    {
-      "id": "f34f",
-      "nombre": "Mariana",
       "correo": "mari@mari.com",
       "clave": "123",
       "tipoUsuario": "usuario"
@@ -52,101 +38,311 @@
   ],
   "joyeria": [
     {
-      "id": "df1d",
-      "nombreProducto": "Anillo",
-      "precioProducto": "3000",
-      "categoriaProducto": "anillos",
+      "id": "5570",
+      "nombreProducto": "Aretes",
+      "precioProducto": "4000",
+      "categoriaProducto": "Aretes",
+      "descripcionProducto": "Aretes ",
+      "imgProducto": "https://tse2.mm.bing.net/th/id/OIP.DVUQ5fi3mh0dTf1IlV36uwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+    },
+    {
+      "id": "f936",
+      "nombreProducto": "Anillo Plateado",
+      "precioProducto": "5000",
+      "categoriaProducto": "Anillos",
       "descripcionProducto": "Anillo Plateado",
-      "imgProducto": "https://www.joyeriasanchez.com/174908-large_default/anillo-perugia-oro-blanco-18k-y-diamantes-040-cts.jpg"
+      "imgProducto": "https://cdnx.jumpseller.com/cactus-store/image/3934187/resize/1200/1200?1536849069"
     },
     {
-      "id": "4291",
-      "nombreProducto": "collar",
-      "precioProducto": "20000",
-      "categoriaProducto": "collares",
-      "descripcionProducto": "collar",
-      "imgProducto": "https://tse3.mm.bing.net/th/id/OIP.uMxHegZMUnBiAI7ADHI9tAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+      "id": "8cde",
+      "nombreProducto": "Anillo",
+      "precioProducto": "4000",
+      "categoriaProducto": "Anillos",
+      "descripcionProducto": "Anillo",
+      "imgProducto": "https://www.accessorize.com/dw/image/v2/BDLV_PRD/on/demandware.static/-/Sites-accessorize-master-catalog/default/dwdb62f387/images/large/02_39442591_3.jpg?sw=663&sh=848&sm=cut"
     },
     {
-      "id": "961b",
-      "nombreProducto": "Arete",
-      "precioProducto": "3500",
-      "categoriaProducto": "aretes",
-      "descripcionProducto": "arete dorado",
-      "imgProducto": "https://tse1.mm.bing.net/th/id/OIP.L_IPpcEfist2zkP2l35DnAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
-    },
-    {
-      "id": "5f42",
-      "nombreProducto": "Pulsera Plateada",
-      "precioProducto": "2000",
-      "categoriaProducto": "pulsera",
-      "descripcionProducto": "Pulsera ",
-      "imgProducto": "https://tse4.mm.bing.net/th/id/OIP.NmY0dj4pqZBBGoekiumgUwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
-    },
-    {
-      "id": "6cc9",
-      "nombreProducto": "Pulsera",
-      "precioProducto": "2000",
-      "categoriaProducto": "pulseras",
-      "descripcionProducto": "pulsera plateada",
-      "imgProducto": "https://tse4.mm.bing.net/th/id/OIP.NmY0dj4pqZBBGoekiumgUwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
-    },
-    {
-      "id": "7c0d",
-      "nombreProducto": "",
-      "precioProducto": "",
-      "categoriaProducto": "",
-      "descripcionProducto": "",
-      "imgProducto": ""
-    },
-    {
-      "id": "e43c",
-      "nombreProducto": "Collar Plateado",
-      "precioProducto": "20000",
-      "categoriaProducto": "collares",
-      "descripcionProducto": "Collar",
+      "id": "1a57",
+      "nombreProducto": "Collar",
+      "precioProducto": "3000",
+      "categoriaProducto": "Collares",
+      "descripcionProducto": "Colla Plateado",
       "imgProducto": "https://images.asos-media.com/products/collares-plateados-en-varias-hileras-con-disenos-delicados-de-acero-inoxidable-allegra-de-petit-moments/205695742-1-silver?$n_640w$&wid=513&fit=constrain"
     },
     {
-      "id": "efc8",
-      "nombreProducto": "Pulsera plateada",
+      "id": "9d6f",
+      "nombreProducto": "Collar de Flores",
       "precioProducto": "5000",
+      "categoriaProducto": "Collares",
+      "descripcionProducto": "Collar de Flores",
+      "imgProducto": "https://plateriapereda.com/wp-content/uploads/2025/09/Collar-flor-lilia-producto.jpg"
+    },
+    {
+      "id": "05a1",
+      "nombreProducto": "Anillo con piedreria",
+      "precioProducto": "6000",
+      "categoriaProducto": "Anillos",
+      "descripcionProducto": "Anillo con piedreria",
+      "imgProducto": "https://luisfeijoo.com/68-large_default/anillo-carril-diamantes.jpg"
+    },
+    {
+      "id": "e2bb",
+      "nombreProducto": "Collar Rosado ",
+      "precioProducto": "10000",
+      "categoriaProducto": "Collares",
+      "descripcionProducto": "Collar rosado ",
+      "imgProducto": "https://www.somosmamas.com.ar/wp-content/uploads/2019/12/collares-de-perlas-rosadas-768x768.jpg"
+    },
+    {
+      "id": "0cf0",
+      "nombreProducto": "Pulsera",
+      "precioProducto": "3000",
       "categoriaProducto": "Pulseras",
-      "descripcionProducto": "Pulsera",
-      "imgProducto": "https://i.pinimg.com/736x/8b/10/3a/8b103a735a5ec493711dc48948d9d410.jpg"
-    },
-    {
-      "id": "fc75",
-      "nombreProducto": "collar",
-      "precioProducto": "15000",
-      "categoriaProducto": "Collares",
-      "descripcionProducto": "collar",
-      "imgProducto": "https://tse1.mm.bing.net/th/id/OIP.LHzsEDS0XedXpIyKyV8oxQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
-    },
-    {
-      "id": "e5db",
-      "nombreProducto": "aaaaa",
-      "precioProducto": "bbbbb",
-      "categoriaProducto": "ccccc",
-      "descripcionProducto": "ddddd",
-      "imgProducto": "eeeee"
-    },
-    {
-      "id": "41d9",
-      "nombreProducto": "aaa",
-      "precioProducto": "aa",
-      "categoriaProducto": "Collares",
-      "descripcionProducto": "dsad",
-      "imgProducto": "dasdas"
-    },
-    {
-      "id": "059d",
-      "nombreProducto": "Collar blanco",
-      "precioProducto": "40000",
-      "categoriaProducto": "Collares",
-      "descripcionProducto": "Collar elegante",
-      "imgProducto": "https://acdn.mitiendanube.com/stores/357/850/products/10a1-a6095b9e9df20f0fd716079954098343-640-0.jpg"
+      "descripcionProducto": "pulseraa",
+      "imgProducto": "https://tse4.mm.bing.net/th/id/OIP.NmY0dj4pqZBBGoekiumgUwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
     }
   ],
-  "carrito": []
+  "carrito": [
+    {
+      "id": "4a8f",
+      "productos": [
+        {
+          "id": "fc75",
+          "nombreProducto": "collar",
+          "precioProducto": "15000",
+          "categoriaProducto": "Collares",
+          "descripcionProducto": "collar",
+          "imgProducto": "https://tse1.mm.bing.net/th/id/OIP.LHzsEDS0XedXpIyKyV8oxQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+        },
+        {
+          "id": "fc75",
+          "nombreProducto": "collar",
+          "precioProducto": "15000",
+          "categoriaProducto": "Collares",
+          "descripcionProducto": "collar",
+          "imgProducto": "https://tse1.mm.bing.net/th/id/OIP.LHzsEDS0XedXpIyKyV8oxQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+        },
+        {
+          "id": "41d9",
+          "nombreProducto": "aaa",
+          "precioProducto": "aa",
+          "categoriaProducto": "Collares",
+          "descripcionProducto": "dsad",
+          "imgProducto": "dasdas"
+        },
+        {
+          "id": "41d9",
+          "nombreProducto": "aaa",
+          "precioProducto": "aa",
+          "categoriaProducto": "Collares",
+          "descripcionProducto": "dsad",
+          "imgProducto": "dasdas"
+        }
+      ],
+      "idUsuario": "66cb",
+      "correoUsuario": "ari@ari.com"
+    },
+    {
+      "id": "a030",
+      "productos": [
+        {
+          "id": "41d9",
+          "nombreProducto": "aaa",
+          "precioProducto": "aa",
+          "categoriaProducto": "Collares",
+          "descripcionProducto": "dsad",
+          "imgProducto": "dasdas"
+        },
+        {
+          "id": "be2b",
+          "nombreProducto": "LALA",
+          "precioProducto": "1000",
+          "categoriaProducto": "Collares",
+          "descripcionProducto": "ACACA",
+          "imgProducto": "https://th.bing.com/th/id/R.16efabb7152d806052994dabc96f0845?rik=jOPNe8Yc9NOBXQ&pid=ImgRaw&r=0"
+        },
+        {
+          "id": "fc75",
+          "nombreProducto": "collar",
+          "precioProducto": "15000",
+          "categoriaProducto": "Collares",
+          "descripcionProducto": "collar",
+          "imgProducto": "https://tse1.mm.bing.net/th/id/OIP.LHzsEDS0XedXpIyKyV8oxQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+        }
+      ],
+      "idUsuario": "66cb",
+      "correoUsuario": "ari@ari.com"
+    },
+    {
+      "id": "d31d",
+      "productos": [
+        {
+          "id": "41d9",
+          "nombreProducto": "aaa",
+          "precioProducto": "aa",
+          "categoriaProducto": "Collares",
+          "descripcionProducto": "dsad",
+          "imgProducto": "dasdas"
+        },
+        {
+          "id": "be2b",
+          "nombreProducto": "LALA",
+          "precioProducto": "1000",
+          "categoriaProducto": "Collares",
+          "descripcionProducto": "ACACA",
+          "imgProducto": "https://th.bing.com/th/id/R.16efabb7152d806052994dabc96f0845?rik=jOPNe8Yc9NOBXQ&pid=ImgRaw&r=0"
+        },
+        {
+          "id": "fc75",
+          "nombreProducto": "collar",
+          "precioProducto": "15000",
+          "categoriaProducto": "Collares",
+          "descripcionProducto": "collar",
+          "imgProducto": "https://tse1.mm.bing.net/th/id/OIP.LHzsEDS0XedXpIyKyV8oxQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+        }
+      ],
+      "idUsuario": "66cb",
+      "correoUsuario": "ari@ari.com"
+    },
+    {
+      "id": "c020",
+      "productos": [
+        {
+          "id": "41d9",
+          "nombreProducto": "aaa",
+          "precioProducto": "aa",
+          "categoriaProducto": "Collares",
+          "descripcionProducto": "dsad",
+          "imgProducto": "dasdas"
+        },
+        {
+          "id": "be2b",
+          "nombreProducto": "LALA",
+          "precioProducto": "1000",
+          "categoriaProducto": "Collares",
+          "descripcionProducto": "ACACA",
+          "imgProducto": "https://th.bing.com/th/id/R.16efabb7152d806052994dabc96f0845?rik=jOPNe8Yc9NOBXQ&pid=ImgRaw&r=0"
+        },
+        {
+          "id": "fc75",
+          "nombreProducto": "collar",
+          "precioProducto": "15000",
+          "categoriaProducto": "Collares",
+          "descripcionProducto": "collar",
+          "imgProducto": "https://tse1.mm.bing.net/th/id/OIP.LHzsEDS0XedXpIyKyV8oxQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+        },
+        {
+          "id": "059d",
+          "nombreProducto": "Collar blanco",
+          "precioProducto": "40000",
+          "categoriaProducto": "Collares",
+          "descripcionProducto": "Collar elegante",
+          "imgProducto": "https://acdn.mitiendanube.com/stores/357/850/products/10a1-a6095b9e9df20f0fd716079954098343-640-0.jpg"
+        },
+        {
+          "id": "fc75",
+          "nombreProducto": "collar",
+          "precioProducto": "15000",
+          "categoriaProducto": "Collares",
+          "descripcionProducto": "collar",
+          "imgProducto": "https://tse1.mm.bing.net/th/id/OIP.LHzsEDS0XedXpIyKyV8oxQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+        },
+        {
+          "id": "efc8",
+          "nombreProducto": "Pulsera plateada",
+          "precioProducto": "5000",
+          "categoriaProducto": "Pulseras",
+          "descripcionProducto": "Pulsera",
+          "imgProducto": "https://i.pinimg.com/736x/8b/10/3a/8b103a735a5ec493711dc48948d9d410.jpg"
+        }
+      ],
+      "idUsuario": "66cb",
+      "correoUsuario": "ari@ari.com"
+    },
+    {
+      "id": "c8de",
+      "productos": [
+        {
+          "id": "8cde",
+          "nombreProducto": "Anillo",
+          "precioProducto": "4000",
+          "categoriaProducto": "Anillos",
+          "descripcionProducto": "Anillo",
+          "imgProducto": "https://www.accessorize.com/dw/image/v2/BDLV_PRD/on/demandware.static/-/Sites-accessorize-master-catalog/default/dwdb62f387/images/large/02_39442591_3.jpg?sw=663&sh=848&sm=cut"
+        },
+        {
+          "id": "f936",
+          "nombreProducto": "Anillo Plateado",
+          "precioProducto": "5000",
+          "categoriaProducto": "Anillos",
+          "descripcionProducto": "Anillo Plateado",
+          "imgProducto": "https://cdnx.jumpseller.com/cactus-store/image/3934187/resize/1200/1200?1536849069"
+        },
+        {
+          "id": "9ba9",
+          "nombreProducto": "Pulsera de perlas",
+          "precioProducto": "4000",
+          "categoriaProducto": "Pulseras",
+          "descripcionProducto": "Pulsera de perlas",
+          "imgProducto": "https://i.etsystatic.com/9417155/r/il/83332f/2011650638/il_1588xN.2011650638_18v7.jpg"
+        },
+        {
+          "id": "71da",
+          "nombreProducto": "Pulsera plateada",
+          "precioProducto": "5000",
+          "categoriaProducto": "Pulseras",
+          "descripcionProducto": "Pulsera plateada, simple y elegante.",
+          "imgProducto": "https://lacasadelinsumo.com/wp-content/uploads/2022/07/tempImageQ2Gowz.jpg"
+        }
+      ],
+      "idUsuario": "66cb",
+      "correoUsuario": "ari@ari.com"
+    },
+    {
+      "id": "18e8",
+      "productos": [
+        {
+          "id": "0cf0",
+          "nombreProducto": "Pulsera",
+          "precioProducto": "3000",
+          "categoriaProducto": "Pulseras",
+          "descripcionProducto": "pulseraa",
+          "imgProducto": "https://tse4.mm.bing.net/th/id/OIP.NmY0dj4pqZBBGoekiumgUwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+        }
+      ],
+      "idUsuario": "66cb",
+      "correoUsuario": "ari@ari.com"
+    },
+    {
+      "id": "6873",
+      "productos": [
+        {
+          "id": "9d6f",
+          "nombreProducto": "Collar de Flores",
+          "precioProducto": "5000",
+          "categoriaProducto": "Collares",
+          "descripcionProducto": "Collar de Flores",
+          "imgProducto": "https://plateriapereda.com/wp-content/uploads/2025/09/Collar-flor-lilia-producto.jpg"
+        },
+        {
+          "id": "1a57",
+          "nombreProducto": "Collar",
+          "precioProducto": "3000",
+          "categoriaProducto": "Collares",
+          "descripcionProducto": "Colla Plateado",
+          "imgProducto": "https://images.asos-media.com/products/collares-plateados-en-varias-hileras-con-disenos-delicados-de-acero-inoxidable-allegra-de-petit-moments/205695742-1-silver?$n_640w$&wid=513&fit=constrain"
+        },
+        {
+          "id": "e2bb",
+          "nombreProducto": "Collar Rosado ",
+          "precioProducto": "10000",
+          "categoriaProducto": "Collares",
+          "descripcionProducto": "Collar rosado ",
+          "imgProducto": "https://www.somosmamas.com.ar/wp-content/uploads/2019/12/collares-de-perlas-rosadas-768x768.jpg"
+        }
+      ],
+      "idUsuario": "08e1",
+      "correoUsuario": "lucho@lucho.com"
+    }
+  ]
 }

@@ -1,16 +1,36 @@
-const ProductCard = ({nombreProducto,precioProducto,categoriaProducto,descripcionProducto,imgProducto,eliminar}) => {
+import "../styles/Admin.css";
+
+const ProductCard = ({
+  nombreProducto,
+  precioProducto,
+  categoriaProducto,
+  descripcionProducto,
+  imgProducto,
+  eliminar,
+  editar, 
+}) => {
   return (
-    <div>
-        <h3>{nombreProducto}</h3>
-        <h3>{precioProducto}</h3>
-        <h3>{categoriaProducto}</h3>
-        <h3>{descripcionProducto}</h3>
-        <img width={120} src={imgProducto}/>
+    <div className="product-card">
+      <img className="product-img" src={imgProducto} alt={nombreProducto} />
+
+      <h3 className="product-name">{nombreProducto}</h3>
+      <p className="product-price">${precioProducto}</p>
+      <p className="product-category">{categoriaProducto}</p>
+      <p className="product-description">{descripcionProducto}</p>
+
+      <div className="btn-eliminar-producto">
         <button onClick={eliminar}>Eliminar</button>
+      </div>
 
-
+      <div className="btn-editar-producto">
+        <button onClick={editar}>Editar</button>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default ProductCard
+export default ProductCard;
+
+
+
+
