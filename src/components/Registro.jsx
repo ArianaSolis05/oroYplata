@@ -21,6 +21,7 @@ function Registro() {
       tipoUsuario: "usuario",
     };
     await postData(Usuario, "usuarios");
+    alert("usuario agregado")
   }
 
   useEffect(()=>{

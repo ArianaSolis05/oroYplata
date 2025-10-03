@@ -14,7 +14,7 @@ const ProductCard = ({
       <img className="product-img" src={imgProducto} alt={nombreProducto} />
 
       <h3 className="product-name">{nombreProducto}</h3>
-      <p className="product-price">${precioProducto}</p>
+      <p className="product-price">₡{precioProducto}</p>
       <p className="product-category">{categoriaProducto}</p>
       <p className="product-description">{descripcionProducto}</p>
 

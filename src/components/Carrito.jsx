@@ -34,7 +34,7 @@ const Carrito = ({ carrito, setCarrito }) => {
             <div key={index} className="cart-item">
               <img src={item.imgProducto} alt={item.nombreProducto} className="cart-img" />
               <span>{item.nombreProducto}</span>
-              <strong>${item.precioProducto}</strong>
+              <strong>₡{item.precioProducto}</strong>
               <button onClick={() => eliminarDelCarrito(item.id)}>Eliminar</button>
             </div>
           ))}

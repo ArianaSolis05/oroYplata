@@ -34,6 +34,20 @@
       "correo": "mari@mari.com",
       "clave": "123",
       "tipoUsuario": "usuario"
+    },
+    {
+      "id": "a4a6",
+      "nombre": "carla",
+      "correo": "carla@carla.com",
+      "clave": "123",
+      "tipoUsuario": "usuario"
+    },
+    {
+      "id": "7f91",
+      "nombre": "Marcos",
+      "correo": "marcos@marcos.com",
+      "clave": "123",
+      "tipoUsuario": "usuario"
     }
   ],
   "joyeria": [
@@ -47,7 +61,7 @@
     },
     {
       "id": "f936",
-      "nombreProducto": "Anillo Plateado",
+      "nombreProducto": "Anillo Plateadooooooo",
       "precioProducto": "5000",
       "categoriaProducto": "Anillos",
       "descripcionProducto": "Anillo Plateado",
@@ -100,6 +114,22 @@
       "categoriaProducto": "Pulseras",
       "descripcionProducto": "pulseraa",
       "imgProducto": "https://tse4.mm.bing.net/th/id/OIP.NmY0dj4pqZBBGoekiumgUwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+    },
+    {
+      "id": "c0d8",
+      "nombreProducto": "Aretes dorados bonitos",
+      "precioProducto": "30000",
+      "categoriaProducto": "Aretes",
+      "descripcionProducto": "Aretes sencillos",
+      "imgProducto": "https://tse1.mm.bing.net/th/id/OIP.L_IPpcEfist2zkP2l35DnAHaHa?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3"
+    },
+    {
+      "id": "82d1",
+      "nombreProducto": "Aretes P",
+      "precioProducto": "4000",
+      "categoriaProducto": "Aretes",
+      "descripcionProducto": "Aretes sencillos",
+      "imgProducto": "https://tse2.mm.bing.net/th/id/OIP.5Jj8QBDUy88l1OiiRbM3qQHaJ4?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3"
     }
   ],
   "carrito": [
@@ -343,6 +373,240 @@
       ],
       "idUsuario": "08e1",
       "correoUsuario": "lucho@lucho.com"
+    },
+    {
+      "id": "7214",
+      "productos": [
+        {
+          "id": "9d6f",
+          "nombreProducto": "Collar de Flores",
+          "precioProducto": "5000",
+          "categoriaProducto": "Collares",
+          "descripcionProducto": "Collar de Flores",
+          "imgProducto": "https://plateriapereda.com/wp-content/uploads/2025/09/Collar-flor-lilia-producto.jpg"
+        },
+        {
+          "id": "e2bb",
+          "nombreProducto": "Collar Rosado ",
+          "precioProducto": "10000",
+          "categoriaProducto": "Collares",
+          "descripcionProducto": "Collar rosado ",
+          "imgProducto": "https://www.somosmamas.com.ar/wp-content/uploads/2019/12/collares-de-perlas-rosadas-768x768.jpg"
+        },
+        {
+          "id": "1a57",
+          "nombreProducto": "Collar",
+          "precioProducto": "3000",
+          "categoriaProducto": "Collares",
+          "descripcionProducto": "Colla Plateado",
+          "imgProducto": "https://images.asos-media.com/products/collares-plateados-en-varias-hileras-con-disenos-delicados-de-acero-inoxidable-allegra-de-petit-moments/205695742-1-silver?$n_640w$&wid=513&fit=constrain"
+        }
+      ],
+      "idUsuario": "66cb",
+      "correoUsuario": "ari@ari.com"
+    },
+    {
+      "id": "d8ed",
+      "productos": [
+        {
+          "id": "f936",
+          "nombreProducto": "Anillo Plateadoo",
+          "precioProducto": "6000",
+          "categoriaProducto": "Anillos",
+          "descripcionProducto": "Anillo Plateado",
+          "imgProducto": "https://cdnx.jumpseller.com/cactus-store/image/3934187/resize/1200/1200?1536849069"
+        },
+        {
+          "id": "05a1",
+          "nombreProducto": "Anillo con piedreria",
+          "precioProducto": "6000",
+          "categoriaProducto": "Anillos",
+          "descripcionProducto": "Anillo con piedreria",
+          "imgProducto": "https://luisfeijoo.com/68-large_default/anillo-carril-diamantes.jpg"
+        },
+        {
+          "id": "0cf0",
+          "nombreProducto": "Pulsera",
+          "precioProducto": "3000",
+          "categoriaProducto": "Pulseras",
+          "descripcionProducto": "pulseraa",
+          "imgProducto": "https://tse4.mm.bing.net/th/id/OIP.NmY0dj4pqZBBGoekiumgUwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+        },
+        {
+          "id": "5570",
+          "nombreProducto": "Aretes",
+          "precioProducto": "4000",
+          "categoriaProducto": "Aretes",
+          "descripcionProducto": "Aretes ",
+          "imgProducto": "https://tse2.mm.bing.net/th/id/OIP.DVUQ5fi3mh0dTf1IlV36uwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+        }
+      ],
+      "idUsuario": "a28a",
+      "correoUsuario": "tay@tay.com"
+    },
+    {
+      "id": "cdbb",
+      "productos": [
+        {
+          "id": "f936",
+          "nombreProducto": "Anillo Plateadoo",
+          "precioProducto": "6000",
+          "categoriaProducto": "Anillos",
+          "descripcionProducto": "Anillo Plateado",
+          "imgProducto": "https://cdnx.jumpseller.com/cactus-store/image/3934187/resize/1200/1200?1536849069"
+        },
+        {
+          "id": "05a1",
+          "nombreProducto": "Anillo con piedreria",
+          "precioProducto": "6000",
+          "categoriaProducto": "Anillos",
+          "descripcionProducto": "Anillo con piedreria",
+          "imgProducto": "https://luisfeijoo.com/68-large_default/anillo-carril-diamantes.jpg"
+        },
+        {
+          "id": "0cf0",
+          "nombreProducto": "Pulsera",
+          "precioProducto": "3000",
+          "categoriaProducto": "Pulseras",
+          "descripcionProducto": "pulseraa",
+          "imgProducto": "https://tse4.mm.bing.net/th/id/OIP.NmY0dj4pqZBBGoekiumgUwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+        },
+        {
+          "id": "5570",
+          "nombreProducto": "Aretes",
+          "precioProducto": "4000",
+          "categoriaProducto": "Aretes",
+          "descripcionProducto": "Aretes ",
+          "imgProducto": "https://tse2.mm.bing.net/th/id/OIP.DVUQ5fi3mh0dTf1IlV36uwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+        },
+        {
+          "id": "f936",
+          "nombreProducto": "Anillo Plateadoo",
+          "precioProducto": "6000",
+          "categoriaProducto": "Anillos",
+          "descripcionProducto": "Anillo Plateado",
+          "imgProducto": "https://cdnx.jumpseller.com/cactus-store/image/3934187/resize/1200/1200?1536849069"
+        }
+      ],
+      "idUsuario": "08e2",
+      "correoUsuario": "pepe@pepe.com"
+    },
+    {
+      "id": "ca0c",
+      "productos": [
+        {
+          "id": "f936",
+          "nombreProducto": "Anillo Plateadoo",
+          "precioProducto": "6000",
+          "categoriaProducto": "Anillos",
+          "descripcionProducto": "Anillo Plateado",
+          "imgProducto": "https://cdnx.jumpseller.com/cactus-store/image/3934187/resize/1200/1200?1536849069"
+        },
+        {
+          "id": "05a1",
+          "nombreProducto": "Anillo con piedreria",
+          "precioProducto": "6000",
+          "categoriaProducto": "Anillos",
+          "descripcionProducto": "Anillo con piedreria",
+          "imgProducto": "https://luisfeijoo.com/68-large_default/anillo-carril-diamantes.jpg"
+        },
+        {
+          "id": "0cf0",
+          "nombreProducto": "Pulsera",
+          "precioProducto": "3000",
+          "categoriaProducto": "Pulseras",
+          "descripcionProducto": "pulseraa",
+          "imgProducto": "https://tse4.mm.bing.net/th/id/OIP.NmY0dj4pqZBBGoekiumgUwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+        },
+        {
+          "id": "5570",
+          "nombreProducto": "Aretes",
+          "precioProducto": "4000",
+          "categoriaProducto": "Aretes",
+          "descripcionProducto": "Aretes ",
+          "imgProducto": "https://tse2.mm.bing.net/th/id/OIP.DVUQ5fi3mh0dTf1IlV36uwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+        },
+        {
+          "id": "f936",
+          "nombreProducto": "Anillo Plateadoo",
+          "precioProducto": "6000",
+          "categoriaProducto": "Anillos",
+          "descripcionProducto": "Anillo Plateado",
+          "imgProducto": "https://cdnx.jumpseller.com/cactus-store/image/3934187/resize/1200/1200?1536849069"
+        }
+      ],
+      "idUsuario": "08e2",
+      "correoUsuario": "pepe@pepe.com"
+    },
+    {
+      "id": "5c59",
+      "productos": [
+        {
+          "id": "e2bb",
+          "nombreProducto": "Collar Rosado ",
+          "precioProducto": "10000",
+          "categoriaProducto": "Collares",
+          "descripcionProducto": "Collar rosado ",
+          "imgProducto": "https://www.somosmamas.com.ar/wp-content/uploads/2019/12/collares-de-perlas-rosadas-768x768.jpg"
+        },
+        {
+          "id": "9d6f",
+          "nombreProducto": "Collar de Flores",
+          "precioProducto": "5000",
+          "categoriaProducto": "Collares",
+          "descripcionProducto": "Collar de Flores",
+          "imgProducto": "https://plateriapereda.com/wp-content/uploads/2025/09/Collar-flor-lilia-producto.jpg"
+        },
+        {
+          "id": "1a57",
+          "nombreProducto": "Collar",
+          "precioProducto": "3000",
+          "categoriaProducto": "Collares",
+          "descripcionProducto": "Colla Plateado",
+          "imgProducto": "https://images.asos-media.com/products/collares-plateados-en-varias-hileras-con-disenos-delicados-de-acero-inoxidable-allegra-de-petit-moments/205695742-1-silver?$n_640w$&wid=513&fit=constrain"
+        },
+        {
+          "id": "e2bb",
+          "nombreProducto": "Collar Rosado ",
+          "precioProducto": "10000",
+          "categoriaProducto": "Collares",
+          "descripcionProducto": "Collar rosado ",
+          "imgProducto": "https://www.somosmamas.com.ar/wp-content/uploads/2019/12/collares-de-perlas-rosadas-768x768.jpg"
+        }
+      ],
+      "idUsuario": "a4a6",
+      "correoUsuario": "carla@carla.com"
+    },
+    {
+      "id": "777f",
+      "productos": [
+        {
+          "id": "05a1",
+          "nombreProducto": "Anillo con piedreria",
+          "precioProducto": "6000",
+          "categoriaProducto": "Anillos",
+          "descripcionProducto": "Anillo con piedreria",
+          "imgProducto": "https://luisfeijoo.com/68-large_default/anillo-carril-diamantes.jpg"
+        },
+        {
+          "id": "8cde",
+          "nombreProducto": "Anillo",
+          "precioProducto": "4000",
+          "categoriaProducto": "Anillos",
+          "descripcionProducto": "Anillo",
+          "imgProducto": "https://www.accessorize.com/dw/image/v2/BDLV_PRD/on/demandware.static/-/Sites-accessorize-master-catalog/default/dwdb62f387/images/large/02_39442591_3.jpg?sw=663&sh=848&sm=cut"
+        },
+        {
+          "id": "f936",
+          "nombreProducto": "Anillo Plateadoo",
+          "precioProducto": "6000",
+          "categoriaProducto": "Anillos",
+          "descripcionProducto": "Anillo Plateado",
+          "imgProducto": "https://cdnx.jumpseller.com/cactus-store/image/3934187/resize/1200/1200?1536849069"
+        }
+      ],
+      "idUsuario": "7f91",
+      "correoUsuario": "marcos@marcos.com"
     }
   ]
 }

@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { getData, postData } from "../services/fetch";
 import "../styles/Inicio.css";
+import { Link } from "react-router-dom";
 
 function CompPrincipal() {
+
   const [productos, setProductos] = useState([]);
   const [anillos, setAnillos] = useState([]);
   const [collares, setCollares] = useState([]);
@@ -87,6 +89,13 @@ function CompPrincipal() {
             <li onClick={() => setCategoriaActiva("Aretes")}>Aretes</li>
             <li onClick={() => setCategoriaActiva("Collares")}>Collares</li>
             <li onClick={() => setCategoriaActiva("Contacto")}>Contacto</li>
+            {JSON.parse(localStorage.getItem("usuario")).tipoUsuario==="admin"&&(
+              <>
+              <Link to={"/admin"}>admin</Link>
+              </>
+            )}
+              <Link to={"/"}>cerrar sesion</Link>
+
           </ul>
         </nav>
       </header>
@@ -95,7 +104,7 @@ function CompPrincipal() {
       </section>
       <aside className={`cart-panel ${mostrarCarrito ? "expanded" : ""}`}>
         {" "}
-        {/* --- CARRITO FLOTANTE AÑADIDO --- */}
+
         <button onClick={() => setMostrarCarrito(!mostrarCarrito)}>
           <span className="cart-emoji">🛒</span>
         </button>
